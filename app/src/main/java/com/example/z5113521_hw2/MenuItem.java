@@ -23,6 +23,7 @@ public class MenuItem extends AppCompatActivity {
 
     private Context mContext;
     ArrayList<OrderItem> mOrder;
+    private int mCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +46,26 @@ public class MenuItem extends AppCompatActivity {
         DetailDesc.setText(itemdesc);
 
         TextView DetailPrice = findViewById(R.id.DetailPrice);
-        DetailPrice.setText(itemprice);
+        DetailPrice.setText("Price: $" + itemprice);
 
         final TextView valueinput = findViewById(R.id.Value);
+
+        Button increase = findViewById(R.id.increase);
+        increase.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mCounter++;
+                valueinput.setText(Integer.toString(mCounter));
+            }
+        });
+
+        Button decrease = findViewById(R.id.decrease);
+        decrease.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                mCounter--;
+                valueinput.setText(Integer.toString(mCounter));
+            }
+        });
+
 
         Button addbutton = findViewById(R.id.AddButton);
         addbutton.setOnClickListener(new View.OnClickListener() {

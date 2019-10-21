@@ -33,7 +33,10 @@ public class Order extends AppCompatActivity {
 
         if (name.equals("0")) {
             //Do Nothing
-        } else {
+        } else if (total.equals("0")){
+
+        }
+        else {
             mOrder.add(new OrderItem(name, total, price));
         }
 
@@ -48,7 +51,7 @@ public class Order extends AppCompatActivity {
 
         String mItemTotal = Double.toString(defaultTotal);
         TextView TotalPrice = findViewById(R.id.TotalPrice);
-        TotalPrice.setText(mItemTotal);
+        TotalPrice.setText("Total: $" + mItemTotal);
 
         oRecyclerView = (RecyclerView) findViewById(R.id.orderList);
         oRecyclerView.setHasFixedSize(true);

@@ -39,8 +39,8 @@ public class oAdapter extends RecyclerView.Adapter<oAdapter.ViewHolder> {
         String orderprice = order.getPrice();
         String ordertotal = order.getTotal();
         holder.oName.setText(ordername);
-        holder.oPrice.setText(orderprice);
-        holder.oTotal.setText(ordertotal);
+        holder.oPrice.setText("Individual Item Price: $" + orderprice);
+        holder.oTotal.setText("Item Count: " + ordertotal);
     }
 
     @Override
