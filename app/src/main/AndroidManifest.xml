@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".Order" android:screenOrientation="portrait"/>
-        <activity android:name=".MenuItem" android:screenOrientation="portrait"/>
+        <activity android:name=".MenuItem" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.Dialog.Alert"/>
         <activity android:name=".MainActivity" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundimage"
     tools:context=".Order">
 
     <LinearLayout
@@ -33,15 +32,15 @@
             android:gravity="center"
             android:text="Total"
             android:textColor="#000000"
-            android:textSize="20sp"
-            app:fontFamily="serif"></TextView>
+            android:textSize="18sp"
+            app:fontFamily="sans-serif"></TextView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/orderList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10sp"
-            android:background="#CCFFFFFF" />
+            android:background="#FFD300"
+            android:paddingTop="1sp"/>
 
     </LinearLayout>
 
